@@ -1,6 +1,6 @@
 #A collection of D3.js snippets and related tools
 
-*Notation for SVG path*
+### *Notation for SVG path*
 
 ```javascript
     tooltip.append('path')
@@ -9,7 +9,7 @@
         });
 ```
 
-*SVG to PNG*
+### *SVG to PNG*
 
 ```javascript
     var svgString = new XMLSerializer().serializeToString(document.querySelector('svg'));
