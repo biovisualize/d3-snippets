@@ -7,6 +7,7 @@
             d: 'M' + [[0, 0], [width, 0]]
         });
 
+
 *SVG to PNG*
 
     var svgString = new XMLSerializer().serializeToString(document.querySelector('svg'));
