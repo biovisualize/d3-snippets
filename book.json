@@ -1,4 +1,6 @@
 {
+  "title": "D3.js snippets",
+  "description": "A collection of D3.js code snippets from the community",
   "structure": {
     "readme": "intro.md"
   }

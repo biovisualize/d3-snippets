@@ -2,14 +2,16 @@
 
 *Notation for SVG path*
 
+```javascript
     tooltip.append('path')
         .attr({
             d: 'M' + [[0, 0], [width, 0]]
         });
-
+```
 
 *SVG to PNG*
 
+```javascript
     var svgString = new XMLSerializer().serializeToString(document.querySelector('svg'));
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
@@ -24,3 +26,4 @@
         DOMURL.revokeObjectURL(png);
     };
     img.src = url;
+```
