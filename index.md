@@ -1,5 +1,12 @@
 #A collection of D3.js snippets and related tools
 
+*Notation for SVG path*
+
+    tooltip.append('path')
+        .attr({
+            d: 'M' + [[0, 0], [width, 0]]
+        });
+
 *SVG to PNG*
 
     var svgString = new XMLSerializer().serializeToString(document.querySelector('svg'));
