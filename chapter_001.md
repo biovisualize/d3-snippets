@@ -3,10 +3,16 @@
 ### *Notation for SVG path*
 
 ```javascript
-    tooltip.append('path')
+    selection.append('path')
         .attr({
             d: 'M' + [[0, 0], [width, 0]]
         });
+```
+
+### *Toggle class*
+
+```javascript
+    selection.classed('highlighted', !selection.classed('highlighted'));
 ```
 
 ### *SVG to PNG*
@@ -26,4 +32,21 @@
         DOMURL.revokeObjectURL(png);
     };
     img.src = url;
+```
+
+So you can also grab the SVG as a string from the browser console:
+
+```javascript
+    new XMLSerializer().serializeToString(document.querySelector('svg'))
+```
+
+### *Append HTML to node*
+Works for HTML as well as SVG
+
+```javascript
+function appendHtmlToNode(htmlString, parent){
+    return parent.appendChild(document.importNode(new DOMParser().parseFromString(htmlString, 'text/html').body.childNodes[0], true));
+}
+
+var fooNode = appendHtmlToNode('<div class="foo"></div>', node);
 ```
